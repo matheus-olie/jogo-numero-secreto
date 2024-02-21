@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#f77903 0%, #7c4b0c 33.33%, #322204 66.67%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 3px solid orange    ;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+    margin: 8%;
+}
+
+.container__conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    height: auto;
+}
+
+.container__informacoes{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container__texto__titulo{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 3rem;
+}
+
+.container__texto__subtitulo {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2rem;
+}
+
+h3{
+    padding: 16px 0 16px 0 ;
+}
+
+li {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    padding: 8px 0 8px 0;
+}
+
+.texto__paragrafo  {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2rem;
+    padding: 8px 0 8px 0;
+}
+
+.container__botao{
+    text-decoration: none;
+    border-radius: 16px;
+    font-size: 2rem;
+    background-color: orangered;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    padding: 14px;
+    width: 50%;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.container__imagem-pessoa{
+    width: 50%;
+}
+
+.rodape {
+    padding: 14px;
+    background-image: linear-gradient(to right, red, orange);
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    body{
+        height: 100vh;
+    }
+   
+    .container__texto__titulo{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container__texto__subtitulo{
+        font-size: 1.3rem;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .container{
+        justify-content: center;
+    }
+    
+    .texto__paragrafo {
+        font-size: 1.3rem;
+    }
+
+    .container__imagem-pessoa {
+        display: none;
+    }
+
+    .container__conteudo {
+        display: block;
+        padding: 3%;
+    }
+
+    .container__informacoes{
+        align-items: center;
+    }
+
+    .rodape{
+        font-size: 1.2rem;
+    }
+
+    .container__botao{
+        font-size: 1.5rem;
+
+    }
+}
+
+@media (max-width: 1200px) {
+
+    body{
+        height: 100vh;
+    }
+   
+    .container__texto__titulo{
+        text-align: center;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .container{
+        justify-content: center;
+    }
+    
+    .texto__paragrafo {
+        font-size: 1.3rem;
+    }
+
+    .container__imagem-pessoa {
+        display: none;
+    }
+
+    .container__conteudo {
+        display: block;
+    }
+
+    .container__informacoes{
+        align-items: center;
+    }
+}

@@ -1,10 +1,3 @@
-/*
-let titulo = document.querySelector('h1');
-titulo.innerHTML = 'Jogo do número secreto';
-
-let paragrafo = document.querySelector('p');
-paragrafo.innerHTML = 'Escolha um número entre 1 e 100';
-*/
 let listaDeNumerosSorteados = [];
 let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
@@ -24,21 +17,27 @@ function mensagemInicial(){
 function verificarChute() {
     let chute = document.querySelector('input').value;
     
-    if (chute == numeroSecreto) {
-        exibirTextoNaTela('h1', 'ACERTOU!');
-        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}`;
-        exibirTextoNaTela('p', mensagemTentativas);
-        document.getElementById('reiniciar').removeAttribute('disabled');
+    if (tentativas == 3 & chute != numeroSecreto)  {
+        exibirTextoNaTela ('h1', 'Você Falhou!');
+        exibirTextoNaTela ('p', 'o limite de tentativas foi atingido, tente novamente!');
+        document.getElementById('reiniciar').removeAttribute('disabled')
     } else {
-        if (chute > numeroSecreto) {
-            exibirTextoNaTela('p', 'O número secreto é menor');
+        if (chute == numeroSecreto) {
+            exibirTextoNaTela('h1', 'ACERTOU!');
+            let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+            let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}`;
+            exibirTextoNaTela('p', mensagemTentativas);
+            document.getElementById('reiniciar').removeAttribute('disabled');
         } else {
-            exibirTextoNaTela('p', 'O número secreto é maior');
+            if (chute > numeroSecreto) {
+                exibirTextoNaTela('p', 'O número secreto é menor');
+            } else {
+                exibirTextoNaTela('p', 'O número secreto é maior');
+            }
         }
+    }
         tentativas++;
         limparCampo();
-    }
 }
 
 function gerarNumeroAleatorio(){
