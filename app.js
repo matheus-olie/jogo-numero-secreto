@@ -52,11 +52,9 @@ function gerarNumeroAleatorio(){
         return gerarNumeroAleatorio();
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
-        console.log(listaDeNumerosSorteados);
         return numeroEscolhido;
     }
 }
-
 
 function limparCampo () {
     chute = document.querySelector('input');
